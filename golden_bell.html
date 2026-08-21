@@ -127,22 +127,27 @@
   .qz-end .sub { font-size:.95rem; color:#8B6914; font-weight:700; margin-bottom:20px; }
 
   /* 시대 타임라인 */
-  .tl { max-width:640px; margin:0 auto 26px; background:#fff; border-radius:20px; padding:18px 16px 16px;
-        box-shadow:0 3px 12px rgba(0,0,0,.07); }
-  .tl-t { text-align:center; font-size:.85rem; font-weight:800; color:#8B6914; margin-bottom:14px; }
-  .tl-line { display:flex; align-items:stretch; gap:5px; }
-  .tl-step { flex:1; text-align:center; }
-  .tl-dot { height:9px; border-radius:5px; margin-bottom:9px; }
-  .tl-era { font-size:.68rem; font-weight:800; margin-bottom:2px; }
-  .tl-nm { font-size:.86rem; font-weight:800; color:#2B1F14; line-height:1.25; }
-  .tl-yr { font-size:.62rem; color:#A09080; font-weight:700; margin-top:3px; }
+  .tl { max-width:640px; margin:0 auto 26px; background:#fff; border-radius:20px;
+        padding:16px 14px 15px; box-shadow:0 3px 12px rgba(0,0,0,.07); }
+  .tl-head { display:flex; align-items:center; gap:9px; margin-bottom:13px; padding:0 2px; }
+  .tl-old, .tl-new { font-size:.72rem; font-weight:800; color:#A08A5A; white-space:nowrap; }
+  .tl-rail { flex:1; height:2px; border-radius:1px;
+             background:linear-gradient(to right,#E8DCC0,#C9A84C); }
+  .tl-line { display:flex; align-items:flex-start; gap:4px; }
+  .tl-step { flex:1; text-align:center; min-width:0; }
+  .tl-dot { height:8px; border-radius:4px; margin-bottom:8px; }
+  .tl-era { font-size:.66rem; font-weight:800; margin-bottom:3px; }
+  .tl-nm { font-size:.84rem; font-weight:800; color:#2B1F14; line-height:1.2; }
+  .tl-yr { font-size:.58rem; color:#A89880; font-weight:700; margin-top:3px; line-height:1.2; }
   .t1 .tl-dot{background:#E87A4B} .t1 .tl-era{color:#B84B1A}
   .t2 .tl-dot{background:#E84B9A} .t2 .tl-era{color:#C2185B}
   .t3 .tl-dot{background:#4B6BE8} .t3 .tl-era{color:#1A3AB8}
   .t4 .tl-dot{background:#4CAF7D} .t4 .tl-era{color:#2E7D52}
   .t5 .tl-dot{background:#E8B84B} .t5 .tl-era{color:#A67A0B}
-  @media (max-width:520px){ .tl-nm{font-size:.74rem} .tl-era{font-size:.6rem} .tl-yr{display:none} }
-
+  @media (max-width:520px){
+    .tl-nm{font-size:.72rem} .tl-era{font-size:.58rem}
+    .tl-yr{font-size:.5rem} .tl-old,.tl-new{font-size:.65rem}
+  }
   /* iOS 대응 */
   html { -webkit-text-size-adjust: 100%; }
   body { -webkit-font-smoothing: antialiased;
@@ -182,15 +187,62 @@
     #lb .t { font-size: 1.18rem; }
     #lb .d { font-size: .86rem; }
   }
+
+  /* 읽어주기 버튼 */
+  .read-btn { display:flex; align-items:center; justify-content:center;
+    width:44px; height:44px; border-radius:13px; margin:0 0 15px auto;
+    background:#FFF4D6; color:#B8901E; border:2px solid #F0D48C;
+    cursor:pointer; -webkit-appearance:none; appearance:none;
+    touch-action:manipulation; transition:.15s; position:relative; }
+  .read-btn .ri { width:22px; height:22px; }
+  .read-btn:active { transform:scale(.92); }
+  .read-btn.on { background:#E8B84B; color:#fff; border-color:#E8B84B; }
+  .read-btn.on::after { content:''; position:absolute; inset:-5px; border-radius:18px;
+    border:2px solid rgba(232,184,75,.55); animation:pulse 1.1s infinite; }
+  @keyframes pulse { 0%{transform:scale(1);opacity:.9} 100%{transform:scale(1.2);opacity:0} }
+
+  /* 퀴즈 개선 */
+  .qz-qrow { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+  .qz-qrow .qz-q { flex:1; margin-bottom:0; }
+  .qz-speak { width:46px; height:46px; flex-shrink:0; border-radius:14px; border:2px solid #F0D48C;
+    background:#FFF4D6; color:#B8901E; cursor:pointer; display:flex; align-items:center;
+    justify-content:center; -webkit-appearance:none; appearance:none; touch-action:manipulation; }
+  .qz-speak .ri { width:22px; height:22px; }
+  .qz-speak.on { background:#E8B84B; border-color:#E8B84B; color:#fff; }
+  .opt.dim { background:#F0EDE6; color:#B0A898; border-color:transparent; opacity:.6; }
+  .qz-fb.try { color:#C98A2A; }
+  .qz-hint { display:none; margin-top:14px; background:#EAF4FF; border-radius:12px;
+    padding:12px 15px; font-size:.92rem; font-weight:700; color:#2A5AB8; text-align:center; }
+  .qz-hint.show { display:block; }
+  .qz-btns { margin-top:14px; }
+  .qz-hintbtn { width:100%; background:#EAF4FF; color:#2A5AB8; border:2px solid #C4DCFF;
+    border-radius:16px; padding:13px; font-family:inherit; font-size:.95rem; font-weight:800;
+    cursor:pointer; -webkit-appearance:none; appearance:none; touch-action:manipulation; margin-bottom:10px; }
+  .qz-hintbtn:active { transform:scale(.99); }
+  @media (max-width:480px){
+    .qz-speak { width:42px; height:42px; font-size:1.15rem; }
+    .read-btn { width:40px; height:40px; border-radius:12px; margin-bottom:13px; }
+    .read-btn .ri { width:20px; height:20px; }
+  }
+
+  /* 키워드 강조 */
+  .facts b, .fold-c b, .headline b { font-weight:800; padding:1px 5px; border-radius:5px; }
+  .c1 .facts b, .c1 .fold-c b { color:#B84B1A; background:#FFE8D6; }
+  .c2 .facts b, .c2 .fold-c b { color:#C2185B; background:#FFDCEF; }
+  .c3 .facts b, .c3 .fold-c b { color:#1A3AB8; background:#DDE5FF; }
+  .c4 .facts b, .c4 .fold-c b { color:#2E7D52; background:#D6FFE4; }
+  .c5 .facts b, .c5 .fold-c b { color:#A67A0B; background:#FFF0C4; }
+  /* 라이트박스 안 키워드 */
+  #lb .d b { background:#FFF0C4; padding:1px 5px; border-radius:5px; }
 </style>
 </head>
 <body>
 
 <h1>📚 독서골든벨</h1>
-<p class="subtitle">옛날부터 순서대로 만나봐요! 아래에서 골든벨 퀴즈에 도전해요 🏅</p>
+<p class="subtitle">🔊 버튼을 누르면 읽어줘요! 아래에서 퀴즈에 도전해요 🏅</p>
 
 <div class="tl">
-  <div class="tl-t">⏳ 옛날 ————————————————————— 최근</div>
+  <div class="tl-head"><span class="tl-old">⏳ 옛날</span><span class="tl-rail"></span><span class="tl-new">최근 →</span></div>
   <div class="tl-line">
     <div class="tl-step t1"><div class="tl-dot"></div><div class="tl-era">고조선</div><div class="tl-nm">단군왕검</div><div class="tl-yr">기원전 2333</div></div>
     <div class="tl-step t2"><div class="tl-dot"></div><div class="tl-era">신라</div><div class="tl-nm">선덕여왕</div><div class="tl-yr">632~647</div></div>
@@ -234,6 +286,7 @@
 </svg>
     </div>
     <div class="body">
+        <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
       <div class="headline">우리나라 첫 번째 나라를 만들었어요!</div>
       <div class="name-row"><span class="name">단군왕검</span><span class="era">고조선 · 기원전 2333년</span></div>
       <div class="years">첫 번째 · 기원전 2333년경</div>
@@ -290,6 +343,7 @@
 </svg>
     </div>
     <div class="body">
+        <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
       <div class="headline">우리나라 최초의 여왕이에요!</div>
       <div class="name-row"><span class="name">선덕여왕</span><span class="era">신라시대 · ?~647년</span></div>
       <div class="years">두 번째 · ? ~ 647년 (632년 즉위)</div>
@@ -348,6 +402,7 @@
 </svg>
     </div>
     <div class="body">
+        <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
       <div class="headline">화약을 만들어 나라를 지켰어요!</div>
       <div class="name-row"><span class="name">최무선</span><span class="era">고려시대 · 1325~1395년</span></div>
       <div class="years">세 번째 · 1325년 ~ 1395년</div>
@@ -413,6 +468,7 @@
 </svg>
     </div>
     <div class="body">
+        <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
       <div class="headline">아픈 사람을 고치는 책을 썼어요!</div>
       <div class="name-row"><span class="name">허준</span><span class="era">조선시대 · 1539~1615년</span></div>
       <div class="years">네 번째 · 1539년 ~ 1615년</div>
@@ -474,6 +530,7 @@
 </svg>
     </div>
     <div class="body">
+        <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
       <div class="headline">옛날 사람들의 모습을 그렸어요!</div>
       <div class="name-row"><span class="name">김홍도</span><span class="era">조선시대 · 1745~1806년</span></div>
       <div class="years">다섯 번째 · 1745년 ~ 1806년</div>
@@ -533,27 +590,73 @@
   </div>
 </div>
 <script>
-const QS = [{"q": "단군왕검이 세운 우리나라 최초의 나라는?", "o": ["고조선", "신라", "고려", "조선"], "a": 0}, {"q": "단군왕검의 어머니는 어떤 동물이 사람이 된 걸까요?", "o": ["곰", "호랑이", "여우", "사슴"], "a": 0}, {"q": "곰과 호랑이가 동굴에서 먹은 두 가지는?", "o": ["쑥과 마늘", "쌀과 콩", "꿀과 감", "고기와 물"], "a": 0}, {"q": "고조선을 세운 날을 기념하는 날은?", "o": ["개천절", "한글날", "광복절", "제헌절"], "a": 0}, {"q": "'널리 사람을 이롭게 한다'는 뜻의 말은?", "o": ["홍익인간", "동의보감", "화통도감", "단원"], "a": 0}, {"q": "우리나라에서 처음으로 화약을 만든 사람은?", "o": ["최무선", "허준", "김홍도", "선덕여왕"], "a": 0}, {"q": "최무선에게 화약 만드는 법을 알려준 중국 상인은?", "o": ["이원", "이순신", "장영실", "정약용"], "a": 0}, {"q": "최무선은 어느 나라 사람일까요?", "o": ["고려", "신라", "조선", "고조선"], "a": 0}, {"q": "최무선이 세운, 화약을 만드는 관청 이름은?", "o": ["화통도감", "규장각", "도화서", "집현전"], "a": 0}, {"q": "최무선이 왜구를 크게 물리친 싸움은?", "o": ["진포 대첩", "한산도 대첩", "살수 대첩", "귀주 대첩"], "a": 0}, {"q": "우리나라 최초의 여왕은 누구일까요?", "o": ["선덕여왕", "진덕여왕", "혜경궁 홍씨", "웅녀"], "a": 0}, {"q": "선덕여왕이 별을 보려고 만든 건물은?", "o": ["첨성대", "황룡사", "경복궁", "수원화성"], "a": 0}, {"q": "선덕여왕은 어느 나라의 임금이었을까요?", "o": ["신라", "백제", "고구려", "고려"], "a": 0}, {"q": "선덕여왕이 세운 9층 목탑이 있던 절은?", "o": ["황룡사", "불국사", "해인사", "용주사"], "a": 0}, {"q": "선덕여왕이 향기가 없다고 알아맞힌 꽃은?", "o": ["모란", "진달래", "국화", "매화"], "a": 0}, {"q": "동의보감을 쓴 조선시대 의사는?", "o": ["허준", "최무선", "김홍도", "정약용"], "a": 0}, {"q": "허준이 쓴 유명한 의학책의 이름은?", "o": ["동의보감", "훈민정음", "삼국사기", "목민심서"], "a": 0}, {"q": "임금님을 치료하는 의사를 뭐라고 부를까요?", "o": ["어의", "훈장", "화원", "현감"], "a": 0}, {"q": "허준이 치료했던 조선의 임금은?", "o": ["선조", "정조", "세종", "영조"], "a": 0}, {"q": "조선에서 가장 유명한 풍속화가는?", "o": ["김홍도", "신윤복", "안견", "정선"], "a": 0}, {"q": "김홍도의 별명(호)은 무엇일까요?", "o": ["단원", "혜원", "겸재", "추사"], "a": 0}, {"q": "김홍도를 아끼던 조선의 임금은?", "o": ["정조", "선조", "세종", "태조"], "a": 0}, {"q": "씨름, 서당, 무동이 실려 있는 김홍도의 화첩은?", "o": ["단원풍속도첩", "동의보감", "원행을묘정리의궤", "훈민정음"], "a": 0}, {"q": "김홍도가 그린, 정조 임금의 수원화성 행차 그림은?", "o": ["화성행행도", "몽유도원도", "인왕제색도", "세한도"], "a": 0}, {"q": "수원화성 행차는 누구의 회갑 잔치 때문이었을까요?", "o": ["혜경궁 홍씨", "선덕여왕", "웅녀", "명성황후"], "a": 0},  {"q": "다섯 사람 중 가장 먼저 살았던 사람은?", "o": ["단군왕검", "선덕여왕", "최무선", "김홍도"], "a": 0}, {"q": "다섯 사람 중 가장 나중에 살았던 사람은?", "o": ["김홍도", "허준", "최무선", "선덕여왕"], "a": 0}, {"q": "허준과 김홍도는 어느 시대 사람일까요?", "o": ["조선", "고려", "신라", "고조선"], "a": 0}, {"q": "씨름 그림에서 사람들 사이를 다니며 엿을 파는 사람은?", "o": ["엿장수", "훈장님", "대장장이", "농부"], "a": 0}, {"q": "서당 그림에서 훌쩍이며 울고 있는 사람은?", "o": ["학생", "훈장님", "엿장수", "임금님"], "a": 0}];
+const QS = [{"q": "단군왕검이 세운 우리나라 최초의 나라는?", "o": ["고조선", "신라", "고려"], "a": 0, "h": "'고'로 시작해요"}, {"q": "단군왕검의 어머니는 어떤 동물이 사람이 된 걸까요?", "o": ["곰", "호랑이", "여우"], "a": 0, "h": "겨울잠을 자는 동물이에요"}, {"q": "곰과 호랑이가 동굴에서 먹은 두 가지는?", "o": ["쑥과 마늘", "쌀과 콩", "꿀과 감"], "a": 0, "h": "쓴 나물과 매운 채소예요"}, {"q": "고조선을 세운 날을 기념하는 날은?", "o": ["개천절", "한글날", "광복절"], "a": 0, "h": "'하늘이 열린 날'이라는 뜻이에요"}, {"q": "'널리 사람을 이롭게 한다'는 뜻의 말은?", "o": ["홍익인간", "동의보감", "화통도감"], "a": 0, "h": "단군왕검의 나라 다스리는 뜻이에요"}, {"q": "우리나라에서 처음으로 화약을 만든 사람은?", "o": ["최무선", "허준", "김홍도"], "a": 0, "h": "펑! 화포를 만든 사람이에요"}, {"q": "최무선에게 화약 만드는 법을 알려준 중국 상인은?", "o": ["이원", "이순신", "장영실"], "a": 0, "h": "두 글자예요"}, {"q": "최무선은 어느 나라 사람일까요?", "o": ["고려", "신라", "조선"], "a": 0, "h": "조선보다 앞선 나라예요"}, {"q": "최무선이 세운, 화약을 만드는 관청 이름은?", "o": ["화통도감", "규장각", "도화서"], "a": 0, "h": "'화'로 시작해요"}, {"q": "최무선이 왜구를 크게 물리친 싸움은?", "o": ["진포 대첩", "한산도 대첩", "살수 대첩"], "a": 0, "h": "'진포'라는 곳에서 있었어요"}, {"q": "우리나라 최초의 여왕은 누구일까요?", "o": ["선덕여왕", "진덕여왕", "혜경궁 홍씨"], "a": 0, "h": "첨성대를 만든 임금이에요"}, {"q": "선덕여왕이 별을 보려고 만든 건물은?", "o": ["첨성대", "황룡사", "경복궁"], "a": 0, "h": "경주에 지금도 있어요"}, {"q": "선덕여왕은 어느 나라의 임금이었을까요?", "o": ["신라", "백제", "고구려"], "a": 0, "h": "경주가 수도였던 나라예요"}, {"q": "선덕여왕이 세운 9층 목탑이 있던 절은?", "o": ["황룡사", "불국사", "해인사"], "a": 0, "h": "'황'으로 시작해요"}, {"q": "선덕여왕이 향기가 없다고 알아맞힌 꽃은?", "o": ["모란", "진달래", "국화"], "a": 0, "h": "크고 탐스러운 꽃이에요"}, {"q": "동의보감을 쓴 조선시대 의사는?", "o": ["허준", "최무선", "김홍도"], "a": 0, "h": "임금님의 의사였어요"}, {"q": "허준이 쓴 유명한 의학책의 이름은?", "o": ["동의보감", "훈민정음", "삼국사기"], "a": 0, "h": "'동'으로 시작해요"}, {"q": "임금님을 치료하는 의사를 뭐라고 부를까요?", "o": ["어의", "훈장", "화원"], "a": 0, "h": "두 글자예요"}, {"q": "허준이 치료했던 조선의 임금은?", "o": ["선조", "정조", "세종"], "a": 0, "h": "두 글자, '선'으로 시작해요"}, {"q": "조선에서 가장 유명한 풍속화가는?", "o": ["김홍도", "신윤복", "안견"], "a": 0, "h": "씨름 그림을 그렸어요"}, {"q": "김홍도의 별명(호)은 무엇일까요?", "o": ["단원", "혜원", "겸재"], "a": 0, "h": "'단'으로 시작해요"}, {"q": "김홍도를 아끼던 조선의 임금은?", "o": ["정조", "선조", "세종"], "a": 0, "h": "수원 화성을 만든 임금이에요"}, {"q": "씨름, 서당, 무동이 실려 있는 김홍도의 화첩은?", "o": ["단원풍속도첩", "동의보감", "원행을묘정리의궤"], "a": 0, "h": "김홍도의 호가 들어가요"}, {"q": "김홍도가 그린, 정조 임금의 수원화성 행차 그림은?", "o": ["화성행행도", "몽유도원도", "인왕제색도"], "a": 0, "h": "'화성'이 들어가요"}, {"q": "수원화성 행차는 누구의 회갑 잔치 때문이었을까요?", "o": ["혜경궁 홍씨", "선덕여왕", "웅녀"], "a": 0, "h": "정조 임금의 어머니예요"}, {"q": "다섯 사람 중 가장 먼저 살았던 사람은?", "o": ["단군왕검", "선덕여왕", "최무선"], "a": 0, "h": "고조선을 세운 분이에요"}, {"q": "다섯 사람 중 가장 나중에 살았던 사람은?", "o": ["김홍도", "허준", "최무선"], "a": 0, "h": "그림을 그린 사람이에요"}, {"q": "허준과 김홍도는 어느 시대 사람일까요?", "o": ["조선", "고려", "신라"], "a": 0, "h": "우리나라 마지막 왕조예요"}, {"q": "씨름 그림에서 사람들 사이를 다니며 엿을 파는 사람은?", "o": ["엿장수", "훈장님", "대장장이"], "a": 0, "h": "달콤한 걸 팔아요"}, {"q": "서당 그림에서 훌쩍이며 울고 있는 사람은?", "o": ["학생", "훈장님", "엿장수"], "a": 0, "h": "공부하러 온 아이예요"}];
 const TOTAL = 10;
-let pool = [], cur = null, idx = 0, score = 0;
+let pool = [], cur = null, idx = 0, solved = 0, tries = 0, hintOn = false;
 
 function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
+/* ── 읽어주기 ── */
+let voices = [];
+function loadVoices(){ voices = window.speechSynthesis ? window.speechSynthesis.getVoices() : []; }
+if(window.speechSynthesis){
+  loadVoices();
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+function speak(text, btn){
+  if(!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text.replace(/<[^>]*>/g,' ').replace(/\s+/g,' '));
+  u.lang = 'ko-KR';
+  u.rate = 0.9;
+  const ko = voices.find(v => v.lang && v.lang.indexOf('ko') === 0);
+  if(ko) u.voice = ko;
+  if(btn){
+    btn.classList.add('on');
+    u.onend = function(){ btn.classList.remove('on'); };
+    u.onerror = function(){ btn.classList.remove('on'); };
+  }
+  window.speechSynthesis.speak(u);
+}
+function readCard(btn){
+  const card = btn.closest('.card');
+  let t = card.querySelector('.name').textContent + '. ';
+  t += card.querySelector('.headline').textContent + ' ';
+  card.querySelectorAll('.facts li').forEach(function(li){ t += li.textContent + ' '; });
+  speak(t, btn);
+}
+function readQ(){
+  const b = document.getElementById('qzSpeak');
+  let t = cur.q + '. ';
+  document.querySelectorAll('#qzO .opt').forEach(function(o, i){ t += (i+1) + '번, ' + o.textContent + '. '; });
+  speak(t, b);
+}
+
+/* ── 퀴즈 ── */
 function qzStart(){
   pool = shuffle(QS).slice(0, TOTAL);
-  idx = 0; score = 0;
+  idx = 0; solved = 0;
   document.getElementById('qzBody').innerHTML =
-    '<div class="qz-q" id="qzQ"></div><div class="qz-opts" id="qzO"></div>' +
+    '<div class="qz-qrow">' +
+      '<div class="qz-q" id="qzQ"></div>' +
+      '<button class="qz-speak" id="qzSpeak" onclick="readQ()" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>' +
+    '</div>' +
+    '<div class="qz-opts" id="qzO"></div>' +
+    '<div class="qz-hint" id="qzH"></div>' +
     '<div class="qz-fb" id="qzF"></div>' +
-    '<button class="qz-next" id="qzN" onclick="qzNext()">다음 문제 →</button>';
+    '<div class="qz-btns">' +
+      '<button class="qz-hintbtn" id="qzHB" onclick="qzHint()">💡 힌트 보기</button>' +
+      '<button class="qz-next" id="qzN" onclick="qzNext()">다음 문제 →</button>' +
+    '</div>';
   qzShow();
 }
 
 function qzShow(){
   cur = pool[idx];
-  document.getElementById('qzScore').textContent = score + ' / ' + TOTAL;
+  tries = 0; hintOn = false;
+  document.getElementById('qzScore').textContent = (idx+1) + '번째 문제';
   document.getElementById('qzBar').style.width = (idx/TOTAL*100) + '%';
-  document.getElementById('qzQ').textContent = (idx+1) + '. ' + cur.q;
+  document.getElementById('qzQ').textContent = cur.q;
   const correct = cur.o[cur.a];
   const opts = shuffle(cur.o);
   const box = document.getElementById('qzO');
@@ -564,30 +667,49 @@ function qzShow(){
     b.onclick = function(){ qzPick(b, t, correct); };
     box.appendChild(b);
   });
-  document.getElementById('qzF').textContent = '';
-  document.getElementById('qzF').className = 'qz-fb';
+  const h = document.getElementById('qzH');
+  h.textContent = ''; h.classList.remove('show');
+  const f = document.getElementById('qzF');
+  f.textContent = ''; f.className = 'qz-fb';
+  document.getElementById('qzHB').style.display = 'block';
   document.getElementById('qzN').classList.remove('show');
 }
 
+function qzHint(){
+  const h = document.getElementById('qzH');
+  h.textContent = '💡 ' + cur.h;
+  h.classList.add('show');
+  hintOn = true;
+  document.getElementById('qzHB').style.display = 'none';
+  speak(cur.h);
+}
+
 function qzPick(btn, picked, correct){
-  const all = document.querySelectorAll('#qzO .opt');
-  all.forEach(function(b){
-    b.disabled = true;
-    if(b.textContent === correct) b.classList.add('right');
-  });
   const f = document.getElementById('qzF');
   if(picked === correct){
-    score++;
-    f.textContent = '정답이에요! 🎉';
+    document.querySelectorAll('#qzO .opt').forEach(function(b){
+      b.disabled = true;
+      if(b.textContent === correct) b.classList.add('right');
+    });
+    solved++;
+    f.textContent = tries === 0 ? '정답이에요! 🎉' : '맞았어요! 잘했어요 👏';
     f.className = 'qz-fb ok';
+    document.getElementById('qzHB').style.display = 'none';
+    document.getElementById('qzN').classList.add('show');
+    document.getElementById('qzN').textContent = (idx === TOTAL-1) ? '끝내기 🏆' : '다음 문제 →';
+    speak(f.textContent);
   } else {
-    btn.classList.add('wrong');
-    f.textContent = '아쉬워요! 정답은 ' + correct;
-    f.className = 'qz-fb no';
+    tries++;
+    btn.classList.add('dim');
+    btn.disabled = true;
+    f.textContent = '다시 골라볼까? 🙂';
+    f.className = 'qz-fb try';
+    if(!hintOn && tries >= 1){
+      const hb = document.getElementById('qzHB');
+      hb.style.display = 'block';
+      hb.textContent = '💡 힌트 볼래요?';
+    }
   }
-  document.getElementById('qzScore').textContent = score + ' / ' + TOTAL;
-  document.getElementById('qzN').classList.add('show');
-  document.getElementById('qzN').textContent = (idx === TOTAL-1) ? '결과 보기 🏆' : '다음 문제 →';
 }
 
 function qzNext(){
@@ -598,17 +720,13 @@ function qzNext(){
 
 function qzEnd(){
   document.getElementById('qzBar').style.width = '100%';
-  let emo, msg;
-  if(score === TOTAL){ emo='🏆'; msg='골든벨을 울렸어요!'; }
-  else if(score >= 8){ emo='🥇'; msg='정말 잘했어요!'; }
-  else if(score >= 6){ emo='🥈'; msg='아주 잘했어요!'; }
-  else if(score >= 4){ emo='🥉'; msg='잘했어요!'; }
-  else { emo='🌱'; msg='조금만 더 해볼까요?'; }
+  document.getElementById('qzScore').textContent = '완주!';
   document.getElementById('qzBody').innerHTML =
-    '<div class="qz-end"><div class="big">' + emo + '</div>' +
-    '<div class="msg">' + msg + '</div>' +
-    '<div class="sub">' + TOTAL + '문제 중 ' + score + '문제를 맞혔어요</div>' +
+    '<div class="qz-end"><div class="big">🏆</div>' +
+    '<div class="msg">모두 맞혔어요!</div>' +
+    '<div class="sub">' + TOTAL + '문제를 끝까지 풀었어요. 정말 대단해요!</div>' +
     '<button class="qz-next show" onclick="qzStart()">다시 도전하기 🔄</button></div>';
+  speak('축하해요! 모두 맞혔어요!');
 }
 
 qzStart();
