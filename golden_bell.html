@@ -12,31 +12,31 @@
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   body { background: #FFF8E7; font-family: 'Pretendard', sans-serif; padding: 16px 12px 40px; }
-  h1 { text-align: center; font-size: 1.7rem; font-weight: 800; color: #3D2B1F; margin-bottom: 6px; }
-  .subtitle { text-align: center; color: #8B6914; margin-bottom: 26px; font-size: 0.88rem; font-weight: 600; }
+  h1 { text-align: center; font-size: 2rem; font-weight: 800; color: #3D2B1F; margin-bottom: 6px; }
+  .subtitle { text-align: center; color: #8B6914; margin-bottom: 26px; font-size: 1rem; font-weight: 600; }
   .grid { display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 640px; margin: 0 auto; }
   .grid .arrow { text-align:center; color:#C9A84C; font-size:1.6rem; font-weight:800; margin:-6px 0; line-height:1; }
   .card { border-radius: 24px; box-shadow: 0 4px 16px rgba(0,0,0,.1); overflow: hidden; background: #fff; }
   .illust { width: 100%; height: 190px; }
   .illust svg { width: 100%; height: 100%; display: block; }
   .body { padding: 20px; }
-  .headline { font-size: 1.05rem; font-weight: 800; line-height: 1.5; margin-bottom: 14px; }
+  .headline { font-size: 1.25rem; font-weight: 800; line-height: 1.5; margin-bottom: 14px; }
   .name-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
-  .name { font-size: 1.7rem; font-weight: 800; color: #2B1F14; }
-  .era { font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
-  .years { font-size: .75rem; color: #999; margin-bottom: 14px; font-weight: 600; }
+  .name { font-size: 2rem; font-weight: 800; color: #2B1F14; }
+  .era { font-size: .88rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+  .years { font-size: .85rem; color: #999; margin-bottom: 14px; font-weight: 600; }
   .facts { list-style: none; margin-bottom: 14px; }
-  .facts li { display: flex; gap: 10px; align-items: flex-start; font-size: .93rem; line-height: 1.6; color: #3A3A3A; margin-bottom: 9px; font-weight: 500; }
-  .facts .ic { font-size: 1.1rem; flex-shrink: 0; }
+  .facts li { display: flex; gap: 11px; align-items: flex-start; font-size: 1.12rem; line-height: 1.65; color: #3A3A3A; margin-bottom: 9px; font-weight: 500; }
+  .facts .ic { font-size: 1.3rem; flex-shrink: 0; }
   .facts b { font-weight: 800; }
   .extra { border-radius: 14px; padding: 13px 15px; margin-bottom: 12px; }
-  .extra-t { font-size: .78rem; font-weight: 800; margin-bottom: 8px; letter-spacing: .5px; }
+  .extra-t { font-size: .92rem; font-weight: 800; margin-bottom: 8px; letter-spacing: .5px; }
   .works { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .work { display: flex; gap: 7px; align-items: center; font-size: .8rem; font-weight: 700; background: #fff; padding: 6px 9px; border-radius: 9px; }
   .work span:first-child { font-size: 1rem; }
   .fold { border-radius: 14px; padding: 13px 15px; margin-bottom: 12px; cursor: pointer; user-select: none; }
-  .fold-t { font-size: .85rem; font-weight: 800; }
-  .fold-c { display: none; margin-top: 10px; font-size: .87rem; line-height: 1.7; color: #3A3A3A; font-weight: 500; }
+  .fold-t { font-size: 1rem; font-weight: 800; }
+  .fold-c { display: none; margin-top: 10px; font-size: 1.05rem; line-height: 1.75; color: #3A3A3A; font-weight: 500; }
   .fold.open .fold-c { display: block; }
   .fold-t::after { content: ' ▾'; }
   .fold.open .fold-t::after { content: ' ▴'; }
@@ -57,25 +57,25 @@
   .work { background:#fff; border-radius:10px; overflow:hidden; cursor:pointer; border:2px solid transparent; transition:.15s; }
   .work:hover, .work:active { border-color:#E8B84B; transform:translateY(-2px); }
   .work svg { width:100%; height:74px; display:block; object-fit:cover; }
-  .work-t { font-size:.78rem; font-weight:800; padding:5px 0 7px; text-align:center; color:#7A5A18; }
-  .tap-hint { font-size:.7rem; color:#999; font-weight:600; margin-top:8px; text-align:center; }
+  .work-t { font-size:.92rem; font-weight:800; padding:5px 0 7px; text-align:center; color:#7A5A18; }
+  .tap-hint { font-size:.82rem; color:#999; font-weight:600; margin-top:8px; text-align:center; }
   /* 화성행행도 미리보기 */
   .big-view { background:#fff; border-radius:12px; overflow:hidden; margin-top:10px; cursor:pointer; border:2px solid transparent; }
   .big-view:hover { border-color:#E8B84B; }
   .big-view svg { width:100%; display:block; }
-  .big-cap { font-size:.75rem; font-weight:700; color:#8A6A2A; text-align:center; padding:6px 0 8px; }
+  .big-cap { font-size:.88rem; font-weight:700; color:#8A6A2A; text-align:center; padding:6px 0 8px; }
   /* 라이트박스 */
   #lb { position:fixed; inset:0; background:rgba(20,14,4,.9); display:none; align-items:center; justify-content:center;
         z-index:999; padding:20px; flex-direction:column; }
   #lb.on { display:flex; }
   #lb .box { background:#F7F0DC; border-radius:18px; padding:16px; max-width:760px; width:100%; max-height:88vh; overflow:auto; }
   #lb svg { width:100%; height:auto; display:block; border-radius:10px; }
-  #lb .t { font-size:1.4rem; font-weight:800; color:#3D2B1F; margin-bottom:4px; text-align:center; }
-  #lb .d { font-size:.9rem; color:#6A5A44; line-height:1.65; margin-top:12px; font-weight:500; }
+  #lb .t { font-size:1.6rem; font-weight:800; color:#3D2B1F; margin-bottom:4px; text-align:center; }
+  #lb .d { font-size:1.08rem; color:#6A5A44; line-height:1.7; margin-top:12px; font-weight:500; }
   #lb .d b { color:#A67A0B; }
   #lb .close { margin-top:14px; background:#E8B84B; color:#fff; border:none; border-radius:30px;
-               padding:11px 30px; font-family:inherit; font-size:.95rem; font-weight:800; cursor:pointer; align-self:center; }
-  #lb .note { font-size:.72rem; color:#9A8A6A; text-align:center; margin-top:10px; font-weight:600; }
+               padding:13px 34px; font-family:inherit; font-size:1.1rem; font-weight:800; cursor:pointer; align-self:center; }
+  #lb .note { font-size:.85rem; color:#9A8A6A; text-align:center; margin-top:10px; font-weight:600; }
 
   /* 응용 문제 섹션 */
   .prac { max-width:1020px; margin:34px auto 0; }
@@ -102,51 +102,51 @@
   .qz { max-width:640px; margin:36px auto 0; background:#fff; border-radius:24px;
         padding:24px 22px 26px; box-shadow:0 4px 20px rgba(0,0,0,.1); }
   .qz-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
-  .qz-h { font-size:1.15rem; font-weight:800; color:#3D2B1F; }
-  .qz-score { font-size:.85rem; font-weight:800; color:#A67A0B; background:#FFF0C4; padding:6px 13px; border-radius:20px; }
+  .qz-h { font-size:1.32rem; font-weight:800; color:#3D2B1F; }
+  .qz-score { font-size:.98rem; font-weight:800; color:#A67A0B; background:#FFF0C4; padding:6px 13px; border-radius:20px; }
   .qz-bar { height:7px; background:#F0EAD8; border-radius:4px; overflow:hidden; margin-bottom:18px; }
   .qz-bar i { display:block; height:100%; background:#E8B84B; width:0; transition:width .3s; }
-  .qz-q { font-size:1.22rem; font-weight:800; color:#2B1F14; line-height:1.5; margin-bottom:18px; text-align:center; min-height:66px;
+  .qz-q { font-size:1.45rem; font-weight:800; color:#2B1F14; line-height:1.5; margin-bottom:18px; text-align:center; min-height:66px;
           display:flex; align-items:center; justify-content:center; }
   .qz-opts { display:grid; gap:9px; }
   .opt { background:#F7F3E8; border:2.5px solid transparent; border-radius:14px; padding:14px 16px;
-         font-family:inherit; font-size:1rem; font-weight:700; color:#3A3020; cursor:pointer; text-align:left; transition:.12s; }
+         font-family:inherit; font-size:1.18rem; font-weight:700; color:#3A3020; cursor:pointer; text-align:left; transition:.12s; }
   .opt:hover:not(:disabled) { background:#FFF4D6; }
   .opt:disabled { cursor:default; }
   .opt.right { background:#DFF7E6; border-color:#3EA96B; color:#1E6B3F; }
   .opt.wrong { background:#FFE4E4; border-color:#E06060; color:#A82828; }
-  .qz-fb { margin-top:16px; text-align:center; font-size:.95rem; font-weight:800; min-height:26px; }
+  .qz-fb { margin-top:16px; text-align:center; font-size:1.12rem; font-weight:800; min-height:26px; }
   .qz-fb.ok { color:#2E8B52; }
   .qz-fb.no { color:#C43A3A; }
   .qz-next { margin-top:14px; width:100%; background:#E8B84B; color:#fff; border:none; border-radius:16px;
-             padding:14px; font-family:inherit; font-size:1rem; font-weight:800; cursor:pointer; display:none; }
+             padding:16px; font-family:inherit; font-size:1.15rem; font-weight:800; cursor:pointer; display:none; }
   .qz-next.show { display:block; }
   .qz-end { text-align:center; }
   .qz-end .big { font-size:3.2rem; margin-bottom:8px; }
-  .qz-end .msg { font-size:1.3rem; font-weight:800; color:#3D2B1F; margin-bottom:6px; }
-  .qz-end .sub { font-size:.95rem; color:#8B6914; font-weight:700; margin-bottom:20px; }
+  .qz-end .msg { font-size:1.5rem; font-weight:800; color:#3D2B1F; margin-bottom:6px; }
+  .qz-end .sub { font-size:1.1rem; color:#8B6914; font-weight:700; margin-bottom:20px; }
 
   /* 시대 타임라인 */
   .tl { max-width:640px; margin:0 auto 26px; background:#fff; border-radius:20px;
         padding:16px 14px 15px; box-shadow:0 3px 12px rgba(0,0,0,.07); }
   .tl-head { display:flex; align-items:center; gap:9px; margin-bottom:13px; padding:0 2px; }
-  .tl-old, .tl-new { font-size:.72rem; font-weight:800; color:#A08A5A; white-space:nowrap; }
+  .tl-old, .tl-new { font-size:.85rem; font-weight:800; color:#A08A5A; white-space:nowrap; }
   .tl-rail { flex:1; height:2px; border-radius:1px;
              background:linear-gradient(to right,#E8DCC0,#C9A84C); }
   .tl-line { display:flex; align-items:flex-start; gap:4px; }
   .tl-step { flex:1; text-align:center; min-width:0; }
   .tl-dot { height:8px; border-radius:4px; margin-bottom:8px; }
-  .tl-era { font-size:.66rem; font-weight:800; margin-bottom:3px; }
-  .tl-nm { font-size:.84rem; font-weight:800; color:#2B1F14; line-height:1.2; }
-  .tl-yr { font-size:.58rem; color:#A89880; font-weight:700; margin-top:3px; line-height:1.2; }
+  .tl-era { font-size:.78rem; font-weight:800; margin-bottom:3px; }
+  .tl-nm { font-size:.98rem; font-weight:800; color:#2B1F14; line-height:1.2; }
+  .tl-yr { font-size:.68rem; color:#A89880; font-weight:700; margin-top:3px; line-height:1.2; }
   .t1 .tl-dot{background:#E87A4B} .t1 .tl-era{color:#B84B1A}
   .t2 .tl-dot{background:#E84B9A} .t2 .tl-era{color:#C2185B}
   .t3 .tl-dot{background:#4B6BE8} .t3 .tl-era{color:#1A3AB8}
   .t4 .tl-dot{background:#4CAF7D} .t4 .tl-era{color:#2E7D52}
   .t5 .tl-dot{background:#E8B84B} .t5 .tl-era{color:#A67A0B}
   @media (max-width:520px){
-    .tl-nm{font-size:.72rem} .tl-era{font-size:.58rem}
-    .tl-yr{font-size:.5rem} .tl-old,.tl-new{font-size:.65rem}
+    .tl-nm{font-size:.86rem} .tl-era{font-size:.7rem}
+    .tl-yr{font-size:.6rem} .tl-old,.tl-new{font-size:.76rem}
   }
   /* iOS 대응 */
   html { -webkit-text-size-adjust: 100%; }
@@ -164,28 +164,28 @@
   /* 모바일 세부 조정 */
   @media (max-width: 480px) {
     body { padding-top: 12px; }
-    h1 { font-size: 1.45rem; }
-    .subtitle { font-size: .82rem; margin-bottom: 18px; }
+    h1 { font-size: 1.75rem; }
+    .subtitle { font-size: .94rem; margin-bottom: 18px; }
     .tl { padding: 14px 10px 12px; border-radius: 16px; }
     .tl-line { gap: 3px; }
-    .tl-nm { font-size: .7rem; }
-    .tl-era { font-size: .56rem; }
-    .tl-yr { display: block; font-size: .5rem; }
+    .tl-nm { font-size: .84rem; }
+    .tl-era { font-size: .68rem; }
+    .tl-yr { display: block; font-size: .6rem; }
     .card { border-radius: 18px; }
     .illust { height: 168px; }
     .body { padding: 16px 15px; }
-    .name { font-size: 1.45rem; }
-    .headline { font-size: .97rem; }
-    .facts li { font-size: .88rem; }
+    .name { font-size: 1.75rem; }
+    .headline { font-size: 1.15rem; }
+    .facts li { font-size: 1.05rem; }
     .works { grid-template-columns: repeat(2, 1fr); gap: 7px; }
-    .work svg { height: 66px; }
+    .work svg { height: 76px; }
     .qz { padding: 20px 16px 22px; border-radius: 18px; }
-    .qz-q { font-size: 1.08rem; min-height: 58px; }
-    .opt { padding: 15px 14px; font-size: .97rem; }
+    .qz-q { font-size: 1.28rem; min-height: 62px; }
+    .opt { padding: 16px 15px; font-size: 1.1rem; }
     #lb { padding: 12px; }
     #lb .box { padding: 13px; border-radius: 14px; }
-    #lb .t { font-size: 1.18rem; }
-    #lb .d { font-size: .86rem; }
+    #lb .t { font-size: 1.38rem; }
+    #lb .d { font-size: 1.02rem; }
   }
 
   /* 읽어주기 버튼 */
@@ -212,11 +212,11 @@
   .opt.dim { background:#F0EDE6; color:#B0A898; border-color:transparent; opacity:.6; }
   .qz-fb.try { color:#C98A2A; }
   .qz-hint { display:none; margin-top:14px; background:#EAF4FF; border-radius:12px;
-    padding:12px 15px; font-size:.92rem; font-weight:700; color:#2A5AB8; text-align:center; }
+    padding:14px 16px; font-size:1.1rem; font-weight:700; color:#2A5AB8; text-align:center; }
   .qz-hint.show { display:block; }
   .qz-btns { margin-top:14px; }
   .qz-hintbtn { width:100%; background:#EAF4FF; color:#2A5AB8; border:2px solid #C4DCFF;
-    border-radius:16px; padding:13px; font-family:inherit; font-size:.95rem; font-weight:800;
+    border-radius:16px; padding:15px; font-family:inherit; font-size:1.1rem; font-weight:800;
     cursor:pointer; -webkit-appearance:none; appearance:none; touch-action:manipulation; margin-bottom:10px; }
   .qz-hintbtn:active { transform:scale(.99); }
   @media (max-width:480px){
@@ -234,6 +234,11 @@
   .c5 .facts b, .c5 .fold-c b { color:#A67A0B; background:#FFF0C4; }
   /* 라이트박스 안 키워드 */
   #lb .d b { background:#FFF0C4; padding:1px 5px; border-radius:5px; }
+
+  /* 키워드 우선 표시 */
+  .facts li { align-items:center; }
+  .facts b { font-size:1.02em; letter-spacing:-.2px; }
+  .facts .sub { color:#8A8375; font-weight:600; font-size:1rem; }
 </style>
 </head>
 <body>
@@ -275,6 +280,13 @@
 <!-- 팔: 나뭇가지 잡기 -->
 <path d="M198 126 L240 112" stroke="#8B5E3C" stroke-width="13" stroke-linecap="round"/>
 <circle cx="242" cy="110" r="8" fill="#F8DCC0"/>
+<!-- 왼팔: 비파형 동검 -->
+<path d="M112 128 L78 116" stroke="#8B5E3C" stroke-width="13" stroke-linecap="round"/>
+<circle cx="76" cy="114" r="8" fill="#F8DCC0"/>
+<rect x="71" y="104" width="10" height="22" rx="3" fill="#8C6A44"/>
+<rect x="62" y="100" width="28" height="7" rx="3" fill="#7A5A38"/>
+<path d="M76 100 C 62 92, 62 76, 72 68 C 66 58, 68 44, 76 34 C 84 44, 86 58, 80 68 C 90 76, 90 92, 76 100 Z" fill="#8FA88C"/>
+<path d="M76 96 L76 40" stroke="#6E8A6C" stroke-width="2.5"/>
 <!-- 얼굴 -->
 <ellipse cx="158" cy="74" rx="34" ry="38" fill="#F8DCC0"/>
 <path d="M130 90 Q158 156 186 90 Q174 124 158 130 Q142 124 130 90 Z" fill="#F5F5F5"/>
@@ -287,20 +299,21 @@
     </div>
     <div class="body">
         <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
-      <div class="headline">우리나라 첫 번째 나라를 만들었어요!</div>
+      <div class="headline">나라를 처음 만든 <b>할아버지</b></div>
       <div class="name-row"><span class="name">단군왕검</span><span class="era">고조선 · 기원전 2333년</span></div>
       <div class="years">첫 번째 · 기원전 2333년경</div>
       <ul class="facts">
-        <li><span class="ic">🏯</span><span>우리나라 최초의 나라 <b>고조선</b>을 세웠어요</span></li>
-        <li><span class="ic">☁️</span><span>아버지는 하늘신 <b>환웅</b>이에요</span></li>
-        <li><span class="ic">🐻</span><span>어머니는 곰이 사람이 된 <b>웅녀</b>예요</span></li>
-        <li><span class="ic">💛</span><span><b>홍익인간</b> — 모두를 이롭게 하자!</span></li>
-        <li><span class="ic">🎉</span><span>고조선을 세운 날이 <b>개천절(10월 3일)</b>이에요</span></li>
+        <li><span class="ic">🏯</span><span><b>고조선</b><span class="sub"> · 우리나라 첫 나라</span></span></li>
+        <li><span class="ic">☁️</span><span><b>환웅</b><span class="sub"> · 하늘신 아버지</span></span></li>
+        <li><span class="ic">🐻</span><span><b>웅녀</b><span class="sub"> · 곰이 된 어머니</span></span></li>
+        <li><span class="ic">💛</span><span><b>홍익인간</b><span class="sub"> · 모두를 이롭게!</span></span></li>
+        <li><span class="ic">🎉</span><span><b>개천절</b><span class="sub"> · 나라 세운 날</span></span></li>
+        <li><span class="ic">🗡️</span><span><b>비파형 동검</b><span class="sub"> · 고조선의 대표 유물</span></span></li>
       </ul>
       <div class="fold" onclick="this.classList.toggle('open')">
-        <div class="fold-t">🐻 환웅 · 웅녀 · 쑥과 마늘 이야기</div>
+        <div class="fold-t">🐻 환웅 · 웅녀 · 쑥과 마늘 100일 이야기</div>
         <div class="fold-c">
-          곰과 호랑이가 사람이 되고 싶어 했어요.<br><b>쑥과 마늘</b>만 먹고 동굴에서 참아야 했는데,<br>호랑이는 뛰쳐나가고 <b>곰</b>만 끝까지 참았어요.<br>그래서 <b>웅녀</b>가 되었답니다! 🐻
+          곰과 호랑이가 사람이 되고 싶어 했어요.<br><b>쑥과 마늘</b>만 먹으며 동굴에서 <b>100일</b>을 참아야 했어요.<br>호랑이는 뛰쳐나가고 <b>곰</b>만 끝까지 참았어요.<br>그래서 <b>웅녀</b>가 되었답니다! 🐻
         
         </div>
       </div>
@@ -344,20 +357,28 @@
     </div>
     <div class="body">
         <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
-      <div class="headline">우리나라 최초의 여왕이에요!</div>
+      <div class="headline">별을 사랑한 <b>첫 여왕</b></div>
       <div class="name-row"><span class="name">선덕여왕</span><span class="era">신라시대 · ?~647년</span></div>
       <div class="years">두 번째 · ? ~ 647년 (632년 즉위)</div>
       <ul class="facts">
-        <li><span class="ic">👑</span><span>신라의 <b>첫 번째 여왕</b>이에요 (632년)</span></li>
-        <li><span class="ic">🔭</span><span>별을 보는 <b>첨성대</b>를 만들었어요</span></li>
-        <li><span class="ic">🏯</span><span><b>황룡사 9층 목탑</b>도 세웠어요</span></li>
-        <li><span class="ic">💡</span><span>아주 <b>지혜로운</b> 임금이었어요</span></li>
+        <li><span class="ic">👑</span><span><b>첫 여왕</b><span class="sub"> · 신라의 임금</span></span></li>
+        <li><span class="ic">🌸</span><span><b>덕만</b><span class="sub"> · 어릴 적 이름</span></span></li>
+        <li><span class="ic">🔭</span><span><b>첨성대</b><span class="sub"> · 별 보는 탑</span></span></li>
+        <li><span class="ic">🏯</span><span><b>황룡사 9층 목탑</b><span class="sub"> · 큰 나무탑</span></span></li>
+        <li><span class="ic">💡</span><span><b>모란꽃</b><span class="sub"> · 향기 없는 걸 알아맞힘</span></span></li>
+        <li><span class="ic">🐸</span><span><b>개구리</b><span class="sub"> · 숨은 적군을 알아챔</span></span></li>
       </ul>
       <div class="fold" onclick="this.classList.toggle('open')">
-        <div class="fold-t">🌸 모란꽃 — 향기를 알아맞힌 이야기</div>
+        <div class="fold-t">🌸 덕만 공주 · 모란꽃 이야기</div>
         <div class="fold-c">
-          중국에서 <b>모란꽃 그림</b>을 보내왔어요.<br>선덕여왕은 <b>"향기가 없겠구나"</b> 했어요.<br>그림에 <b>나비와 벌이 없었거든요!</b><br>정말로 향기가 나지 않았대요 🌸
+          중국에서 <b>모란꽃 그림</b>이 왔어요.<br>공주였던 <b>덕만</b>은 <b>"향기가 없겠구나"</b> 했어요.<br>그림에 <b>나비와 벌이 없었거든요!</b><br>정말로 향기가 나지 않았대요 🌸
         
+        </div>
+      </div>
+      <div class="fold" onclick="this.classList.toggle('open')">
+        <div class="fold-t">🐸 개구리가 알려준 비밀</div>
+        <div class="fold-c">
+          겨울인데 <b>개구리</b>가 시끄럽게 울었어요.<br>덕만은 <b>"적군이 숨어 있구나!"</b> 알아챘어요.<br>정말로 그곳에 적이 숨어 있었대요! 🐸
         </div>
       </div>
     </div>
@@ -403,21 +424,32 @@
     </div>
     <div class="body">
         <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
-      <div class="headline">화약을 만들어 나라를 지켰어요!</div>
+      <div class="headline">펑! 화약을 만든 <b>발명가</b></div>
       <div class="name-row"><span class="name">최무선</span><span class="era">고려시대 · 1325~1395년</span></div>
       <div class="years">세 번째 · 1325년 ~ 1395년</div>
       <ul class="facts">
-        <li><span class="ic">💥</span><span>우리나라에서 처음으로 <b>화약</b>을 만들었어요</span></li>
-        <li><span class="ic">🤝</span><span>중국 상인 <b>이원</b>에게 화약 만드는 법을 배웠어요</span></li>
-        <li><span class="ic">🔫</span><span>화약으로 <b>화포(대포)</b>를 만들었어요</span></li>
-        <li><span class="ic">🌊</span><span><b>진포 대첩</b>에서 왜구 배 500척을 물리쳤어요</span></li>
-        <li><span class="ic">🏭</span><span>화약 만드는 관청 <b>화통도감</b>을 세웠어요</span></li>
+        <li><span class="ic">💥</span><span><b>화약</b><span class="sub"> · 우리나라 최초!</span></span></li>
+        <li><span class="ic">🤝</span><span><b>이원</b><span class="sub"> · 화약을 알려준 상인</span></span></li>
+        <li><span class="ic">🔫</span><span><b>화포</b><span class="sub"> · 화약으로 만든 대포</span></span></li>
+        <li><span class="ic">🚀</span><span><b>주화</b><span class="sub"> · 날아가는 불화살</span></span></li>
+        <li><span class="ic">🌊</span><span><b>진포 대첩</b><span class="sub"> · 왜구를 무찌름</span></span></li>
+        <li><span class="ic">🏭</span><span><b>화통도감</b><span class="sub"> · 화약 만드는 곳</span></span></li>
       </ul>
       <div class="fold" onclick="this.classList.toggle('open')">
         <div class="fold-t">💥 이원 · 염초 — 화약을 만든 이야기</div>
         <div class="fold-c">
           화약 만드는 법은 <b>중국만 아는 비밀</b>이었어요.<br>최무선은 중국 상인 <b>이원</b>에게 배웠어요.<br>어려운 재료 <b>염초</b>도 끝내 만들어냈답니다! 💥
         
+        </div>
+      </div>
+      <div class="fold" onclick="this.classList.toggle('open')">
+        <div class="fold-t">🚀 화약이 만든 무기들</div>
+        <div class="fold-c">
+          최무선이 만든 <b>주화</b>는 화약으로 날아가는 불화살이에요.<br>
+          이 주화가 조선시대에 더 발전했어요!<br><br>
+          🚀 <b>신기전</b> · 주화가 발전한 로켓 화살 (대·중·소)<br>
+          🛒 <b>화차</b> · 신기전을 한 번에 100발 쏘는 수레<br>
+          💣 <b>천자총통</b> · 조선에서 가장 큰 대포
         </div>
       </div>
     </div>
@@ -469,19 +501,19 @@
     </div>
     <div class="body">
         <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
-      <div class="headline">아픈 사람을 고치는 책을 썼어요!</div>
+      <div class="headline">병을 고치는 책을 쓴 <b>의사</b></div>
       <div class="name-row"><span class="name">허준</span><span class="era">조선시대 · 1539~1615년</span></div>
       <div class="years">네 번째 · 1539년 ~ 1615년</div>
       <ul class="facts">
-        <li><span class="ic">📖</span><span><b>동의보감</b>이라는 의학책을 썼어요</span></li>
-        <li><span class="ic">🩺</span><span><b>선조 임금</b>을 치료한 <b>어의</b>였어요</span></li>
-        <li><span class="ic">💚</span><span>가난한 백성도 <b>치료</b>해 주었어요</span></li>
-        <li><span class="ic">🌍</span><span>동의보감은 <b>세계기록유산</b>이에요</span></li>
+        <li><span class="ic">📖</span><span><b>동의보감</b><span class="sub"> · 병 고치는 책</span></span></li>
+        <li><span class="ic">🩺</span><span><b>어의</b><span class="sub"> · 선조 임금의 의사</span></span></li>
+        <li><span class="ic">💚</span><span><b>약초</b><span class="sub"> · 우리 풀로 치료</span></span></li>
+        <li><span class="ic">🌍</span><span><b>세계기록유산</b><span class="sub"> · 세계가 인정!</span></span></li>
       </ul>
       <div class="fold" onclick="this.classList.toggle('open')">
-        <div class="fold-t">📖 동의보감 — 15년 걸려 쓴 25권 책</div>
+        <div class="fold-t">📖 동의보감 — 14년 걸려 쓴 책</div>
         <div class="fold-c">
-          허준이 <b>15년</b> 동안 쓴 책이에요.<br>우리나라 <b>풀과 약초</b>로 병 고치는 법을 담았어요.<br>백성들도 읽도록 <b>한글</b>로도 적었답니다 📖
+          허준이 <b>14년</b> 동안 쓴 책이에요.<br>우리나라 <b>풀과 약초</b>로 병 고치는 법을 담았어요.<br>백성들도 읽도록 <b>한글</b>로도 적었답니다 📖
         
         </div>
       </div>
@@ -531,15 +563,15 @@
     </div>
     <div class="body">
         <button class="read-btn" onclick="readCard(this)" aria-label="읽어주기"><svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg></button>
-      <div class="headline">옛날 사람들의 모습을 그렸어요!</div>
+      <div class="headline">옛날 사람들을 그린 <b>화가</b></div>
       <div class="name-row"><span class="name">김홍도</span><span class="era">조선시대 · 1745~1806년</span></div>
       <div class="years">다섯 번째 · 1745년 ~ 1806년</div>
       <ul class="facts">
-        <li><span class="ic">🎨</span><span>조선에서 제일 유명한 <b>화가</b>예요</span></li>
-        <li><span class="ic">✍️</span><span>별명(호)이 <b>단원</b>이에요</span></li>
-        <li><span class="ic">👑</span><span><b>정조 임금</b>이 가장 아끼던 화가예요</span></li>
-        <li><span class="ic">📔</span><span><b>단원풍속도첩</b>에 그림 25점이 있어요</span></li>
-        <li><span class="ic">🏰</span><span><b>화성행행도</b> 8폭 병풍을 그렸어요</span></li>
+        <li><span class="ic">🎨</span><span><b>풍속화</b><span class="sub"> · 사람 사는 모습 그림</span></span></li>
+        <li><span class="ic">✍️</span><span><b>단원</b><span class="sub"> · 김홍도의 별명</span></span></li>
+        <li><span class="ic">👑</span><span><b>정조 임금</b><span class="sub"> · 김홍도를 아낌</span></span></li>
+        <li><span class="ic">📔</span><span><b>씨름<span class="sub"> · 서당</b> · 가장 유명한 그림</span></span></li>
+        <li><span class="ic">🏰</span><span><b>화성행행도</b><span class="sub"> · 임금님 행차 그림</span></span></li>
       </ul>
 
       <div class="extra">
@@ -557,6 +589,15 @@
         <div class="tap-hint">그림을 눌러 크게 보세요 👆</div>
       </div>
 
+      <div class="fold" onclick="this.classList.toggle('open')">
+        <div class="fold-t">🏛️ 도화서 · 강세황 · 어진화사</div>
+        <div class="fold-c">
+          🏛️ <b>도화서</b> · 나라의 그림 그리는 관청이에요.<br>
+          👨‍🏫 <b>강세황</b> · 어린 김홍도를 가르친 스승이에요.<br>
+          👑 <b>어진화사</b> · 임금님 얼굴을 그리는 화가!<br>
+          김홍도는 정조 임금의 얼굴을 세 번이나 그렸어요.
+        </div>
+      </div>
       <div class="fold" onclick="this.classList.toggle('open')">
         <div class="fold-t">🏰 화성행행도 — 정조 · 혜경궁 홍씨 · 8폭 병풍</div>
         <div class="fold-c">
@@ -590,7 +631,7 @@
   </div>
 </div>
 <script>
-const QS = [{"q": "단군왕검이 세운 우리나라 최초의 나라는?", "o": ["고조선", "신라", "고려"], "a": 0, "h": "'고'로 시작해요"}, {"q": "단군왕검의 어머니는 어떤 동물이 사람이 된 걸까요?", "o": ["곰", "호랑이", "여우"], "a": 0, "h": "겨울잠을 자는 동물이에요"}, {"q": "곰과 호랑이가 동굴에서 먹은 두 가지는?", "o": ["쑥과 마늘", "쌀과 콩", "꿀과 감"], "a": 0, "h": "쓴 나물과 매운 채소예요"}, {"q": "고조선을 세운 날을 기념하는 날은?", "o": ["개천절", "한글날", "광복절"], "a": 0, "h": "'하늘이 열린 날'이라는 뜻이에요"}, {"q": "'널리 사람을 이롭게 한다'는 뜻의 말은?", "o": ["홍익인간", "동의보감", "화통도감"], "a": 0, "h": "단군왕검의 나라 다스리는 뜻이에요"}, {"q": "우리나라에서 처음으로 화약을 만든 사람은?", "o": ["최무선", "허준", "김홍도"], "a": 0, "h": "펑! 화포를 만든 사람이에요"}, {"q": "최무선에게 화약 만드는 법을 알려준 중국 상인은?", "o": ["이원", "이순신", "장영실"], "a": 0, "h": "두 글자예요"}, {"q": "최무선은 어느 나라 사람일까요?", "o": ["고려", "신라", "조선"], "a": 0, "h": "조선보다 앞선 나라예요"}, {"q": "최무선이 세운, 화약을 만드는 관청 이름은?", "o": ["화통도감", "규장각", "도화서"], "a": 0, "h": "'화'로 시작해요"}, {"q": "최무선이 왜구를 크게 물리친 싸움은?", "o": ["진포 대첩", "한산도 대첩", "살수 대첩"], "a": 0, "h": "'진포'라는 곳에서 있었어요"}, {"q": "우리나라 최초의 여왕은 누구일까요?", "o": ["선덕여왕", "진덕여왕", "혜경궁 홍씨"], "a": 0, "h": "첨성대를 만든 임금이에요"}, {"q": "선덕여왕이 별을 보려고 만든 건물은?", "o": ["첨성대", "황룡사", "경복궁"], "a": 0, "h": "경주에 지금도 있어요"}, {"q": "선덕여왕은 어느 나라의 임금이었을까요?", "o": ["신라", "백제", "고구려"], "a": 0, "h": "경주가 수도였던 나라예요"}, {"q": "선덕여왕이 세운 9층 목탑이 있던 절은?", "o": ["황룡사", "불국사", "해인사"], "a": 0, "h": "'황'으로 시작해요"}, {"q": "선덕여왕이 향기가 없다고 알아맞힌 꽃은?", "o": ["모란", "진달래", "국화"], "a": 0, "h": "크고 탐스러운 꽃이에요"}, {"q": "동의보감을 쓴 조선시대 의사는?", "o": ["허준", "최무선", "김홍도"], "a": 0, "h": "임금님의 의사였어요"}, {"q": "허준이 쓴 유명한 의학책의 이름은?", "o": ["동의보감", "훈민정음", "삼국사기"], "a": 0, "h": "'동'으로 시작해요"}, {"q": "임금님을 치료하는 의사를 뭐라고 부를까요?", "o": ["어의", "훈장", "화원"], "a": 0, "h": "두 글자예요"}, {"q": "허준이 치료했던 조선의 임금은?", "o": ["선조", "정조", "세종"], "a": 0, "h": "두 글자, '선'으로 시작해요"}, {"q": "조선에서 가장 유명한 풍속화가는?", "o": ["김홍도", "신윤복", "안견"], "a": 0, "h": "씨름 그림을 그렸어요"}, {"q": "김홍도의 별명(호)은 무엇일까요?", "o": ["단원", "혜원", "겸재"], "a": 0, "h": "'단'으로 시작해요"}, {"q": "김홍도를 아끼던 조선의 임금은?", "o": ["정조", "선조", "세종"], "a": 0, "h": "수원 화성을 만든 임금이에요"}, {"q": "씨름, 서당, 무동이 실려 있는 김홍도의 화첩은?", "o": ["단원풍속도첩", "동의보감", "원행을묘정리의궤"], "a": 0, "h": "김홍도의 호가 들어가요"}, {"q": "김홍도가 그린, 정조 임금의 수원화성 행차 그림은?", "o": ["화성행행도", "몽유도원도", "인왕제색도"], "a": 0, "h": "'화성'이 들어가요"}, {"q": "수원화성 행차는 누구의 회갑 잔치 때문이었을까요?", "o": ["혜경궁 홍씨", "선덕여왕", "웅녀"], "a": 0, "h": "정조 임금의 어머니예요"}, {"q": "다섯 사람 중 가장 먼저 살았던 사람은?", "o": ["단군왕검", "선덕여왕", "최무선"], "a": 0, "h": "고조선을 세운 분이에요"}, {"q": "다섯 사람 중 가장 나중에 살았던 사람은?", "o": ["김홍도", "허준", "최무선"], "a": 0, "h": "그림을 그린 사람이에요"}, {"q": "허준과 김홍도는 어느 시대 사람일까요?", "o": ["조선", "고려", "신라"], "a": 0, "h": "우리나라 마지막 왕조예요"}, {"q": "씨름 그림에서 사람들 사이를 다니며 엿을 파는 사람은?", "o": ["엿장수", "훈장님", "대장장이"], "a": 0, "h": "달콤한 걸 팔아요"}, {"q": "서당 그림에서 훌쩍이며 울고 있는 사람은?", "o": ["학생", "훈장님", "엿장수"], "a": 0, "h": "공부하러 온 아이예요"}];
+const QS = [{"q": "단군왕검이 세운 우리나라 최초의 나라는?", "o": ["고조선", "신라", "고려"], "a": 0, "h": "'고'로 시작해요"}, {"q": "단군왕검의 어머니는 어떤 동물이 사람이 된 걸까요?", "o": ["곰", "호랑이", "여우"], "a": 0, "h": "겨울잠을 자는 동물이에요"}, {"q": "곰과 호랑이가 동굴에서 먹은 두 가지는?", "o": ["쑥과 마늘", "쌀과 콩", "꿀과 감"], "a": 0, "h": "쓴 나물과 매운 채소예요"}, {"q": "고조선을 세운 날을 기념하는 날은?", "o": ["개천절", "한글날", "광복절"], "a": 0, "h": "'하늘이 열린 날'이라는 뜻이에요"}, {"q": "'널리 사람을 이롭게 한다'는 뜻의 말은?", "o": ["홍익인간", "동의보감", "화통도감"], "a": 0, "h": "단군왕검의 나라 다스리는 뜻이에요"}, {"q": "우리나라에서 처음으로 화약을 만든 사람은?", "o": ["최무선", "허준", "김홍도"], "a": 0, "h": "펑! 화포를 만든 사람이에요"}, {"q": "최무선에게 화약 만드는 법을 알려준 중국 상인은?", "o": ["이원", "이순신", "장영실"], "a": 0, "h": "두 글자예요"}, {"q": "최무선은 어느 나라 사람일까요?", "o": ["고려", "신라", "조선"], "a": 0, "h": "조선보다 앞선 나라예요"}, {"q": "최무선이 세운, 화약을 만드는 관청 이름은?", "o": ["화통도감", "규장각", "도화서"], "a": 0, "h": "'화'로 시작해요"}, {"q": "최무선이 왜구를 크게 물리친 싸움은?", "o": ["진포 대첩", "한산도 대첩", "살수 대첩"], "a": 0, "h": "'진포'라는 곳에서 있었어요"}, {"q": "우리나라 최초의 여왕은 누구일까요?", "o": ["선덕여왕", "진덕여왕", "혜경궁 홍씨"], "a": 0, "h": "첨성대를 만든 임금이에요"}, {"q": "선덕여왕이 별을 보려고 만든 건물은?", "o": ["첨성대", "황룡사", "경복궁"], "a": 0, "h": "경주에 지금도 있어요"}, {"q": "선덕여왕은 어느 나라의 임금이었을까요?", "o": ["신라", "백제", "고구려"], "a": 0, "h": "경주가 수도였던 나라예요"}, {"q": "선덕여왕이 세운 9층 목탑이 있던 절은?", "o": ["황룡사", "불국사", "해인사"], "a": 0, "h": "'황'으로 시작해요"}, {"q": "선덕여왕이 향기가 없다고 알아맞힌 꽃은?", "o": ["모란", "진달래", "국화"], "a": 0, "h": "크고 탐스러운 꽃이에요"}, {"q": "동의보감을 쓴 조선시대 의사는?", "o": ["허준", "최무선", "김홍도"], "a": 0, "h": "임금님의 의사였어요"}, {"q": "허준이 쓴 유명한 의학책의 이름은?", "o": ["동의보감", "훈민정음", "삼국사기"], "a": 0, "h": "'동'으로 시작해요"}, {"q": "임금님을 치료하는 의사를 뭐라고 부를까요?", "o": ["어의", "훈장", "화원"], "a": 0, "h": "두 글자예요"}, {"q": "허준이 치료했던 조선의 임금은?", "o": ["선조", "정조", "세종"], "a": 0, "h": "두 글자, '선'으로 시작해요"}, {"q": "조선에서 가장 유명한 풍속화가는?", "o": ["김홍도", "신윤복", "안견"], "a": 0, "h": "씨름 그림을 그렸어요"}, {"q": "김홍도의 별명(호)은 무엇일까요?", "o": ["단원", "혜원", "겸재"], "a": 0, "h": "'단'으로 시작해요"}, {"q": "김홍도를 아끼던 조선의 임금은?", "o": ["정조", "선조", "세종"], "a": 0, "h": "수원 화성을 만든 임금이에요"}, {"q": "씨름, 서당, 무동이 실려 있는 김홍도의 화첩은?", "o": ["단원풍속도첩", "동의보감", "원행을묘정리의궤"], "a": 0, "h": "김홍도의 호가 들어가요"}, {"q": "김홍도가 그린, 정조 임금의 수원화성 행차 그림은?", "o": ["화성행행도", "몽유도원도", "인왕제색도"], "a": 0, "h": "'화성'이 들어가요"}, {"q": "수원화성 행차는 누구의 회갑 잔치 때문이었을까요?", "o": ["혜경궁 홍씨", "선덕여왕", "웅녀"], "a": 0, "h": "정조 임금의 어머니예요"}, {"q": "다섯 사람 중 가장 먼저 살았던 사람은?", "o": ["단군왕검", "선덕여왕", "최무선"], "a": 0, "h": "고조선을 세운 분이에요"}, {"q": "다섯 사람 중 가장 나중에 살았던 사람은?", "o": ["김홍도", "허준", "최무선"], "a": 0, "h": "그림을 그린 사람이에요"}, {"q": "허준과 김홍도는 어느 시대 사람일까요?", "o": ["조선", "고려", "신라"], "a": 0, "h": "우리나라 마지막 왕조예요"}, {"q": "씨름 그림에서 사람들 사이를 다니며 엿을 파는 사람은?", "o": ["엿장수", "훈장님", "대장장이"], "a": 0, "h": "달콤한 걸 팔아요"}, {"q": "서당 그림에서 훌쩍이며 울고 있는 사람은?", "o": ["학생", "훈장님", "엿장수"], "a": 0, "h": "공부하러 온 아이예요"}, {"q": "고조선을 대표하는 청동기 유물은?", "o": ["비파형 동검", "첨성대", "화포"], "a": 0, "h": "악기 '비파'를 닮은 칼이에요"}, {"q": "곰과 호랑이는 동굴에서 며칠을 참아야 했나요?", "o": ["100일", "10일", "1년"], "a": 0, "h": "백 일이에요"}, {"q": "선덕여왕의 어릴 적 이름은?", "o": ["덕만", "웅녀", "혜경궁"], "a": 0, "h": "'덕'으로 시작해요"}, {"q": "겨울에 우는 소리로 숨은 적군을 알려준 동물은?", "o": ["개구리", "호랑이", "곰"], "a": 0, "h": "연못에 사는 초록 동물이에요"}, {"q": "최무선이 만든, 날아가는 불화살은?", "o": ["주화", "첨성대", "동의보감"], "a": 0, "h": "'주'로 시작해요"}, {"q": "김홍도의 스승은 누구일까요?", "o": ["강세황", "이원", "환웅"], "a": 0, "h": "'강'으로 시작해요"}, {"q": "나라에서 그림을 그리던 관청 이름은?", "o": ["도화서", "화통도감", "첨성대"], "a": 0, "h": "'도'로 시작해요"}, {"q": "임금님의 얼굴을 그리는 화가를 뭐라고 할까요?", "o": ["어진화사", "어의", "단원"], "a": 0, "h": "임금님 얼굴 그림을 '어진'이라고 해요"}];
 const TOTAL = 10;
 let pool = [], cur = null, idx = 0, solved = 0, tries = 0, hintOn = false;
 
